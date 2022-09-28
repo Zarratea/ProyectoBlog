@@ -1,0 +1,27 @@
+{% block sidebar %}
+
+<style>
+  .card {
+    box-shadow: 0 16px 48px #6a6a6b;
+  }
+</style>
+
+<!-- Sidebar Widgets Column -->
+<div class="col-md-4 float-right ">
+  <div class="card my-4">
+    <h5 class="card-header">Sobre nosotros</h5>
+    <div class="card-body">
+      <p class="card-text"> Hola somos Franco y Felipe , somos estudiantes de coderhouse .Este es nuestro proyecto final!! </p>
+      
+      {% if user.is_authenticated %}
+        <a href="{% url 'crear_post'   %}" class="btn btn-danger" >Crear Post</a>
+        
+      {% endif %}
+      
+      
+      <!-- esto es un boton a la website -->
+    </div>
+  </div>
+</div>
+
+{% endblock sidebar %}
